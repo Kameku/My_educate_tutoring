@@ -1,0 +1,155 @@
+.bg-blue-color{
+    background-color: #366db1;
+}
+.bg-second{
+    background-color: #ff9a00;
+}
+
+.bg-trama{
+    background-color: #a8cfff;
+}
+.bg-trama2{
+    background-color: #3ca1b085;
+}
+
+.bg-tramaSecond{
+    background-color: #ffffff;
+}
+.font-size-5{
+    font-size: 5px;
+}
+.font-size-15{
+    font-size: 15px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.font-size-25{
+    font-size: 25px;
+}
+
+.font-size-28{
+    font-size: 28px;
+}
+
+.font-size-30{
+    font-size: 30px;
+}
+.font-size-35{
+    font-size: 35px;
+}
+.font-size-40{
+    font-size: 40px;
+}
+.font-size-45{
+    font-size: 45px;
+}
+.font-size-50{
+    font-size: 50px;
+}
+
+.font-size-100{
+    font-size: 100px;
+}
+
+
+.shadow-primary{
+    box-shadow: 8px 8px 15px rgba(1, 6, 79, 0.5) !important;
+
+}
+
+.text-blue-color{
+   color: #366db1;
+}
+
+.red-danger{
+    background-color: rgb(182, 0, 0);
+}
+
+.text-red-danger{
+    color: rgb(182, 0, 0) !important;
+}
+
+.border-red-danger{
+    border-color: rgb(182, 0, 0);
+}
+
+.text-secundary{
+    color:#22cff5;
+}
+
+.enrolmentProcess-mark{
+    background-color: #cce8da;
+    border:none !important;
+}
+.enrolmentProcess-mark h5{
+    color: rgb(142 175 143);
+}
+.enrolmentProcess-mark a{
+    pointer-events: none;
+    color:rgb(142 175 143) !important;
+    /* display: none; */
+}
+
+.enrolmentProcess-mark button{
+    color:rgb(142 175 143) !important;
+}
+
+.enrolmentProcess-mark .badge-soft-danger {
+
+    color:#45cb85 !important;
+    background-color: rgba(69, 203, 133, 0.18);
+}
+
+.enrolmentProcess-mark #complete{
+
+        display: none;
+}
+.enrolmentProcess-mark #pending{
+
+    display: block !important;
+}
+
+#pending{
+    display: none;
+}
+
+/* #pending button{
+    color:rgb(255, 34, 0) !important;
+} */
+
+.packageSelectHide{
+    display: none !important;
+}
+
+.hideAtach{
+    display: none !important;
+}
+
+/* .margin-top-validate{
+    margin-top:-4.25rem !important;
+} */
+
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 30px !important;
+    cursor: pointer;
+}
+
+
+.capita{
+    text-transform:capitalize;
+}
+
+.bg-claro{
+    background-color: rgba(12, 152, 239, 0.414) !important;
+}
