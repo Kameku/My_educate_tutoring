@@ -61,29 +61,33 @@ class EnrolmentController extends Controller
 
         request()->validate($ruleStudent);
 
-        $enrolment = Enrolment::create(request()->all());
+        $enrolment = $request->all();
 
-        if(!empty($request->interventions_attachmen_e1)){
-            $reportE1 = $request->file('interventions_attachmen_e1')->store($request->parent_email, 'reports');
-            $enrolment -> update([
-                'interventions_attachmen_e1' => $reportE1,
-                ]);
-            };
-    
-        if(!empty($request->interventions_attachmen_e2)){
-            $reportE2 = $request->file('interventions_attachmen_e2')->store($request->parent_email, 'reports');
-            $enrolment -> update([
-                'interventions_attachmen_e2' => $reportE2,
-                ]);
-            };
+        if($request->hasFile('interventions_attachmen_e1')){
             
-        if(!empty($request->interventions_attachmen_e3)){
-            $reportE3 = $request->file('interventions_attachmen_e3')->store($request->parent_email, 'reports');
-            $enrolment -> update([
-                'interventions_attachmen_e3' => $reportE3,
-                ]);
-            }; 
-        return view('welcome');
+            $enrolment['interventions_attachmen_e1'] = time() . '_' . $request->file('interventions_attachmen_e1')->getClientOriginalName();
+            $request->file('interventions_attachmen_e1')->storeAs('reports/'.$request->parent_email, $enrolment['interventions_attachmen_e1']);
+
+        }
+        if($request->hasFile('interventions_attachmen_e2')){
+        
+            $enrolment['interventions_attachmen_e2'] = time() . '_' . $request->file('interventions_attachmen_e2')->getClientOriginalName();
+            $request->file('interventions_attachmen_e2')->storeAs('reports/'.$request->parent_email, $enrolment['interventions_attachmen_e2']);
+
+        }
+        if($request->hasFile('interventions_attachmen_e3')){
+            
+            $enrolment['interventions_attachmen_e3'] = time() . '_' . $request->file('interventions_attachmen_e3')->getClientOriginalName();
+            $request->file('interventions_attachmen_e3')->storeAs('reports/'.$request->parent_email, $enrolment['interventions_attachmen_e3']);
+
+        }
+
+        Enrolment::create($enrolment);
+        
+        // return view('welcome')->withSuccess('Your enrollment has been received.  A member of our team will be in touch with you very soon.');
+        return redirect()->route('welcome')->withSuccess('Your enrollment has been received.  A member of our team will be in touch with you very soon.');
+
+
     }
 
     public function show(Enrolment $enrolment, CommentsEnrolment $commentsEnrolment)

@@ -5,8 +5,7 @@
 @section('body')
 
     <body style="background-color: #fff4ec">
-        <br>
-        <br>
+      
         {{-- {{$linkEnrolment}} --}}
         @if (session()->has('success'))
             <div class="row mt-3 ml-2">

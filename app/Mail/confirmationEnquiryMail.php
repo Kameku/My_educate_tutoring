@@ -34,7 +34,7 @@ class confirmationEnquiryMail extends Mailable
     public function build()
     {
         return $this->view('emails.confirmationEnquiry')
-            ->attach(asset('documentPdf/Overview_of_ServicesApril2020.pdf'))
-            ->attach(asset('documentPdf/Schedule_of_Fees.pdf'));
+            ->attach(asset('documentPdf/Overview_of_Services_Terms_of_Engagement.pdf'))
+            ->attach(asset('documentPdf/Schedule_of_Fees_2022.pdf'));
     }
 }
