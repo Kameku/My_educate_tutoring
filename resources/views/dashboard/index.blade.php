@@ -178,8 +178,8 @@
                                 <h6 class="text-uppercase text-white mb-2">
                                     Current<br>Lessons
                                 </h6>
-                                {{-- <span class="h2 mb-0 text-white">{{ $classTotal }}</span> --}}
-                                <span class="h2 mb-0 text-white">150</span>
+                                <span class="h2 mb-0 text-white">{{ $classTotal }}</span>
+                                {{-- <span class="h2 mb-0 text-white">10</span> --}}
                             </div>
                             <div class="col-auto py-2">
                                 <span class="py-4 px-1 rounded bg-white">

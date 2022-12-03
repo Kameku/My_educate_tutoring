@@ -28,6 +28,7 @@
                     aria-describedby="datatable-buttons_info">
                         <thead>
                             <tr role="row">
+                                {{-- <th>id</th> --}}
                                 <th>Autentication</th>
                                 <th>Student Name</th>
                                 <th>Parent Name</th>
@@ -40,6 +41,7 @@
                         <tbody>
                             @foreach( $students as $student )
                             <tr role="row" class="odd">
+                                {{-- <td>{{$student->student->id}}</td> --}}
                                 <td>{{$student->student->user->code_id}}</td>
                                 <td>{{$student->first_name.' '.$student->last_name }}</td>
                                 <td>{{$student->parent_name}}</td>

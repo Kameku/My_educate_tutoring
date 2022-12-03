@@ -13,15 +13,15 @@
         <table class="table align-middle table-striped table-bordered table-sm ">
             <thead>
                 <tr>
-                    <th scope="col" style="width:130px;" class="bg-secondary text-light text-center">H</th>
-                    <th scope="col" class="bg-primary text-light text-center">Alicia Rd T1</th>
-                    <th scope="col" class="bg-info text-light text-center">Alicia Rd T2</th>
-                    <th scope="col" class="bg-primary text-light text-center">Alicia Rd T3</th>
-                    <th scope="col" class="bg-info text-light text-center">Magnet Ct M1</th>
-                    <th scope="col" class="bg-primary text-light text-center">Magnet Ct M2</th>
-                    <th scope="col" class="bg-info text-light text-center">Magnet Ct M3</th>
-                    <th scope="col" class="bg-primary text-light text-center">Magnet Ct M4</th>
-                    <th scope="col" class="bg-info text-light text-center">Magnet Ct M5</th>
+                    <th scope="col" style="width:150px;" class="bg-secondary text-light text-center">H</th>
+                    <th scope="col" style="width:70px;" class="bg-primary text-light text-center">Alicia Rd T1</th>
+                    <th scope="col" style="width:70px;" class="bg-info text-light text-center">Alicia Rd T2</th>
+                    <th scope="col" style="width:70px;" class="bg-primary text-light text-center">Alicia Rd T3</th>
+                    <th scope="col" style="width:70px;" class="bg-info text-light text-center">Magnet Ct M1</th>
+                    <th scope="col" style="width:70px;" class="bg-primary text-light text-center">Magnet Ct M2</th>
+                    <th scope="col" style="width:70px;" class="bg-info text-light text-center">Magnet Ct M3</th>
+                    <th scope="col" style="width:70px;" class="bg-primary text-light text-center">Magnet Ct M4</th>
+                    <th scope="col" style="width:70px;" class="bg-info text-light text-center">Magnet Ct M5</th>
                 </tr>
             </thead>
             <tbody>

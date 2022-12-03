@@ -25,7 +25,7 @@
 
     @section('content')
         <div class="home-btn d-none d-sm-block">
-            <a href="login" class="btn waves-effect text-white waves-light" style="background-color: #ff7c50">
+            <a href="login" class="btn text-white waves-effect waves-light" style="background-color: #ff7c50">
                 <i class='bx bxs-layout font-size-15 align-middle mr-2'></i>
                 <span> Already enrolled? Login here! </span>
             </a>
@@ -51,7 +51,7 @@
                             </div>
                             <h3 class="mt-5">An Active & Engaging Learning Experience</h3>
                             <p>Premium educational support tailored to meet the individual needs of our students</p>
-                            <a href="{{route('enquiry.create')}}" class="btn btn-lg btn-block text-white" style="background-color: #f84304">Create Enquiry</a>
+                            <a href="{{route('enquiry.create')}}" class="btn text-white btn-lg btn-block" style="background-color: #f84304">Create Enquiry</a>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="card mt-4 maintenance-box">

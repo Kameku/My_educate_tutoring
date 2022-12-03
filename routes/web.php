@@ -32,7 +32,7 @@ Route::get('/', function () {
 
 Auth::routes();
 //Dashboard 
-Route::get('/dashboard', [HomeController::class, 'index'])->middleware('can:dashboard.index')->name('dashboard.index');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard.index');
 
 
 //Users and Roles

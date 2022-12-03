@@ -9,6 +9,7 @@ use App\Models\Enrolment;
 use App\Models\Preenrolment;
 use App\Models\enquiryPage;
 use App\Models\Enquiry;
+use App\Models\event;
 use Carbon\Carbon;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Http\Request;
@@ -38,6 +39,8 @@ class HomeController extends Controller
         $mytasks = Auth::user()->tasks;
 
         $totalEnrolment = collect(Enrolment::where('status', 'Active')->get())->count();
+        $classTotal = event::where('type', 'Class')->count();
+
 
         $preenrol = Preenrolment::latest()->take(5)->get();
         $enquiryPage = enquiryPage::latest()->take(5)->get();
@@ -54,7 +57,7 @@ class HomeController extends Controller
             'year' => $year,
             'inspire' => $inspire,
             'mytasks' => $mytasks,
-            // 'classTotal' => $classTotal,
+            'classTotal' => $classTotal,
             'preenrolment' => $preenrol,
             'enquiryPage' => $enquiryPage,
             'enrolmentLast' => $enrolmentLast,

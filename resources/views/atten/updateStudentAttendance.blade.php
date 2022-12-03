@@ -23,12 +23,12 @@
                         <div class="col-4">
                             <label for="">Student Attendance</label>
                             <select name="student_attendance" class=" form-control" data-placeholder="Status ......">
-                                <option value="" disabled selected>Select</option>
-                                <option  value="Attended Ontime">Attended Ontime</option>
-                                <option  value="Attended Tardy">Attended Tardy</option>
-                                <option  value="Cancelled - No Show">Cancelled - No Show</option>
-                                <option  value="Rescheduled">Rescheduled</option>
-                                <option  value="N/A">N/A</option>
+                                {{-- <option value="" disabled selected>Select</option> --}}
+                                <option {{ $atten->student_attendance == 'Attended Ontime' ? 'selected' : '' }}  value="Attended Ontime">Attended Ontime</option>
+                                <option {{ $atten->student_attendance == 'Attended Tardy' ? 'selected' : '' }}  value="Attended Tardy">Attended Tardy</option>
+                                <option {{ $atten->student_attendance == 'Cancelled - No Show' ? 'selected' : '' }}  value="Cancelled - No Show">Cancelled - No Show</option>
+                                <option {{ $atten->student_attendance == 'Rescheduled' ? 'selected' : '' }}  value="Rescheduled">Rescheduled</option>
+                                <option {{ $atten->student_attendance == 'N/A' ? 'selected' : '' }}  value="N/A">N/A</option>
                             </select>
                             @error('student_attendance')
                                 <span class="text-danger font-size-6">{{ $message }}</span>
@@ -37,11 +37,11 @@
                         <div class="col-4">
                             <label for="">Student Homework Completed?</label>
                             <select name="homework_completed" class=" form-control" data-placeholder="Status ......">
-                                <option value="" disabled selected>Select</option>
-                                <option  value="Yes">Yes</option>
-                                <option  value="No">No</option>
-                                <option  value="Not Returned">Not Returned</option>
-                                <option  value="N/A">N/A</option>
+                                {{-- <option  value="" disabled selected>Select</option> --}}
+                                <option {{ $atten->homework_completed == 'Yes' ? 'selected' : '' }}  value="Yes">Yes</option>
+                                <option {{ $atten->homework_completed == 'No' ? 'selected' : '' }}  value="No">No</option>
+                                <option {{ $atten->homework_completed == 'Not Returned' ? 'selected' : '' }}  value="Not Returned">Not Returned</option>
+                                <option {{ $atten->homework_completed == 'N/A' ? 'selected' : '' }}  value="N/A">N/A</option>
                             </select>
                             @error('homework_completed')
                             <span class="text-danger font-size-6">{{ $message }}</span>
@@ -55,11 +55,11 @@
                         <div class="col-4">
                             <label for="">Weekly Lesson</label>
                             <select name="weekly_lesson" class=" form-control" data-placeholder="Status ......">
-                                <option value="" disabled selected>Select</option>
-                                <option  value="Completed">Completed</option>
-                                <option  value="To Be Completed">To Be Completed</option>
-                                <option  value="Cancelled">Cancelled</option>
-                                <option  value="N/A">N/A</option>
+                                {{-- <option  value="" disabled selected>Select</option> --}}
+                                <option {{ $atten->weekly_lesson == 'Completed' ? 'selected' : '' }}  value="Completed">Completed</option>
+                                <option {{ $atten->weekly_lesson == 'To Be Completed' ? 'selected' : '' }}  value="To Be Completed">To Be Completed</option>
+                                <option {{ $atten->weekly_lesson == 'Cancelled' ? 'selected' : '' }}  value="Cancelled">Cancelled</option>
+                                <option {{ $atten->weekly_lesson == 'N/A' ? 'selected' : '' }}  value="N/A">N/A</option>
                             </select>
                             @error('weekly_lesson')
                                 <span class="text-danger font-size-6">{{ $message }}</span>
@@ -68,10 +68,10 @@
                         <div class="col-4">
                             <label for="">Weekly Homework Assignment</label>
                             <select name="homework_assignment" class=" form-control" data-placeholder="Status ......">
-                                <option value="" disabled selected>Select</option>
-                                <option  value="Assigned">Assigned</option>
-                                <option  value="To Be Assigned">To Be Assigned</option>
-                                <option  value="N/A">N/A</option>
+                                {{-- <option value="" disabled selected>Select</option> --}}
+                                <option {{ $atten->homework_assignment == 'Assigned' ? 'selected' : '' }}  value="Assigned">Assigned</option>
+                                <option {{ $atten->homework_assignment == 'To Be Assigned' ? 'selected' : '' }}  value="To Be Assigned">To Be Assigned</option>
+                                <option {{ $atten->homework_assignment == 'N/A' ? 'selected' : '' }}  value="N/A">N/A</option>
                             </select>
                             @error('homework_assignment')
                                 <span class="text-danger font-size-6">{{ $message }}</span>
@@ -80,10 +80,10 @@
                         <div class="col-4">
                             <label for="">Email to School Teacher</label>
                             <select name="email_school" class=" form-control" data-placeholder="Status ......">
-                                <option value="" disabled selected>Select</option>
-                                <option  value="Introductory">Introductory</option>
-                                <option  value="Followup">Followup</option>
-                                <option  value="N/A">N/A</option>
+                                {{-- <option value="" disabled selected>Select</option> --}}
+                                <option {{ $atten->email_school == 'Introductory' ? 'selected' : '' }}  value="Introductory">Introductory</option>
+                                <option {{ $atten->email_school == 'Followup' ? 'selected' : '' }}  value="Followup">Followup</option>
+                                <option {{ $atten->email_school == 'N/A' ? 'selected' : '' }}  value="N/A">N/A</option>
                             </select>
                         </div>
                     </div>

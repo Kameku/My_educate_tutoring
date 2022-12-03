@@ -39,12 +39,12 @@
                         <tbody>
                             @foreach( $students as $student )
                             <tr role="row" class="odd">
-                                <td>{{$student->student->user->code_id}}</td>
-                                <td>{{$student->first_name.' '.$student->last_name }}</td>
-                                <td>{{$student->parent_name}}</td>
-                                <td>{{$student->parent_email}}</td>
+                                <td>{{$student->user->code_id}}</td>
+                                <td>{{$student->enrolment->first_name.' '.$student->enrolment->last_name }}</td>
+                                <td>{{$student->enrolment->parent_name}}</td>
+                                <td>{{$student->enrolment->parent_email}}</td>
                                 <td>{{$student->created_at->format('Y-m-d')}}</td>
-                                <td>{{$student->status}}</td>
+                                <td>{{$student->enrolment->status}}</td>
                             </tr>
                             @endforeach
                         </tbody>

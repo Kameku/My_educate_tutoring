@@ -30,6 +30,8 @@ class StudentController extends Controller
         //Crea la consulta de eloquen para traer solo ciertos archivos de esa relacion.
         $studentEnrolments = $studentEnrolments->where('status', 'Active');
 
+        //  return $studentEnrolments;
+
         return view('students.index')->with([
 
             'students' => $studentEnrolments,
@@ -96,7 +98,7 @@ class StudentController extends Controller
             
             $student = new Student();
             $student->user_id = $userS->id;
-            $student->enrolment_id = $request->enrolment_id;
+            $student->enrolment_id = $enrolment->id;
             $student->save();
 
             $parent = new father();
@@ -104,9 +106,13 @@ class StudentController extends Controller
             $parent->student_id = $student->id;
             $parent->save();
 
-            $enrolment = Enrolment::find($request->enrolment_id);
-            $enrolment->status = 'Active';
-            $enrolment->save();
+            $enrolment->update([
+                'status' => 'Active'
+            ]);
+
+            // $enrolment = Enrolment::find($request->enrolment_id);
+            // $enrolment->status = 'Active';
+            // $enrolment->save();
 
             session()->flash('success', 'The student has been activated successfully');
             return redirect()->back();
@@ -130,30 +136,24 @@ class StudentController extends Controller
         ]);
     }
 
-    public function disable(Student $student, $id){
+    public function disable(Enrolment $enrolment){
 
-        $student= Student::where('id' ,'=',$id)->first();
-
-        $student->user->update([ 
+        $enrolment->student->user->update([ 
             'password' => bcrypt('0987654321')
         ]);
 
-        $enrolment = Enrolment::find($student->enrolment_id);
-        $enrolment->status = 'Disable';
-        $enrolment->save();
+        // return $enrolment;
 
-        
+        $status = Enrolment::find($enrolment->id);
+        $status->know = 'Disable';
+        $status->status = 'Disable';
+        $status->save();      
 
         session()->flash('success', 'The student has been disable successfully');
-        // return $student->enrolment;
 
         return redirect()->back(); 
-        
-        // Connor.Thompson@myeducatetutoring.com
-        // tutoring.Thompson
 
     }
-
 
     public function former(){
 
@@ -193,17 +193,24 @@ class StudentController extends Controller
     public function list(){
 
         //Trae todos los estudiantes
-        $students = Student::all();
+        $students = Student::all(); 
+
+        // return $students;
         //Recorre los estudiantes para traer el enrolment de cada uno atraves de su relacion 
-        foreach ($students as $student){
-             $students = $student->enrolment;
-        }
+        // foreach ($students as $student){
+        //      $students = $student->enrolment;
+        // }
+
         //crea una colecion de enrolments en base al foreach anterior
-        $studentEnrolments = $students->all();
-        $studentEnrolments = $studentEnrolments->where('status','!=', 'Inactive');
+        // $studentEnrolments = $students->all();
+        // return $students;
+        // $studentEnrolments = $studentEnrolments->where('status','!=', 'Inactive');
+
+        // return $studentEnrolments;
 
         return view('students.list')->with([
-            'students' => $studentEnrolments,
+            // 'students' => $studentEnrolments,
+            'students' => $students,
         ]);
     }
 }

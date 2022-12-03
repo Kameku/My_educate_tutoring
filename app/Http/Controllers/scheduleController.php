@@ -46,6 +46,8 @@ class scheduleController extends Controller
         $tutorId = $request->tutor;
         $tutorUser = User::where('id', $tutorId)->first();
 
+        // return $tutorUser;
+
         function hexadecimalARgb($hexadecimal)
             {
                 list($r, $g, $b) = sscanf($hexadecimal, "#%02x%02x%02x");
